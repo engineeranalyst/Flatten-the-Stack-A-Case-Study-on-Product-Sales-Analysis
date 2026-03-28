@@ -1,6 +1,4 @@
-# Flatten-the-Stack
-
-# Executive Summary: Product Sales Analysis
+# Executive Summary
 
 ## Project Overview
 This project performs a comprehensive product sales analysis on **semi-structured JSON order data**. By transforming denormalized data into a structured relational format, this pipeline enables deep insights into fulfillment performance and order-level revenue.
