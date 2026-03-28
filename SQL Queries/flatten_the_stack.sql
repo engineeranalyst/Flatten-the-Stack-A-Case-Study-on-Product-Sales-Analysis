@@ -56,7 +56,6 @@ SET order_date = STR_TO_DATE(@var_date, '%m/%d/%Y'); -- Put the dates in the pro
 --    - Expand each JSON array into multiple rows
 --    - Extract nested product attributes
 -- ----------------------------------------
-
 -- Result:
 -- Each product within an order becomes its own row.
 INSERT INTO normalized_sales_orders
