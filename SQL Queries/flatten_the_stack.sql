@@ -46,7 +46,7 @@ SET order_date = STR_TO_DATE(@var_date, '%m/%d/%Y'); -- Put the dates in the pro
 -- STEP 4: NORMALIZE JSON DATA (CORE TRANSFORMATION)
 -- =================================================
 -- This is the most important step in the pipeline.
--- ---------------------------------------------------
+-- -----------------------------------------------------------------
 -- Key operations:
 -- 1. Cleans malformed JSON caused by CSV escaping:
 --    - Removes outer quotes
@@ -55,9 +55,10 @@ SET order_date = STR_TO_DATE(@var_date, '%m/%d/%Y'); -- Put the dates in the pro
 -- 2. Uses JSON_TABLE() to:
 --    - Expand each JSON array into multiple rows
 --    - Extract nested product attributes
--- ----------------------------------------
+-- -----------------------------------------------------------------
 -- Result:
 -- Each product within an order becomes its own row.
+-- -----------------------------------------------------------------
 INSERT INTO normalized_sales_orders
 SELECT
 	o.order_number,
@@ -90,11 +91,12 @@ WHERE NOT EXISTS (
 -- =============================================
 -- Objective:
 -- - Measure performance of each fulfillment method
+-- ------------------------------------------------
 -- - Compute:
 --   • Total orders
 --   • Total revenue
 --   • Percent contribution to overall sales
--- --------------------------------------------
+-- ------------------------------------------------
 SELECT
 	fulfillment,
 	COUNT(DISTINCT order_number) AS total_orders,
@@ -108,11 +110,12 @@ ORDER BY total_sales DESC;
 -- ========================================
 -- Objective:
 -- Identify high performing individual orders.
--- -----------------------------------------------------
+-- -------------------------------------------
 -- Metrics:
 -- - Number of distinct products in the order
 -- - Total quantity purchased
 -- - Total revenue per order
+-- -------------------------------------------
 SELECT
 	order_number,
 	fulfillment,
