@@ -86,9 +86,9 @@ WHERE NOT EXISTS (
 		  n.product_name = jt.product_name
 );
 
--- =============================================
--- STEP 5: SALES ANALYSIS BY FULFILLMENT CHANNEL
--- =============================================
+-- ======================================
+-- STEP 5: SALES ANALYSIS BY FULFILLMENTS
+-- ======================================
 -- Objective:
 -- - Measure performance of each fulfillment method
 -- ------------------------------------------------
@@ -105,9 +105,9 @@ FROM normalized_sales_orders
 GROUP BY fulfillment
 ORDER BY total_sales DESC;
 
--- ========================================
--- STEP 6: SALES ANALYSIS BY REVENUE ORDERS
--- ========================================
+-- ================================
+-- STEP 6: SALES ANALYSIS BY ORDERS
+-- ================================
 -- Objective:
 -- Identify high performing individual orders.
 -- -------------------------------------------
