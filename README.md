@@ -1,5 +1,3 @@
-# Executive Summary
-
 ## Project Overview
 This project performs a comprehensive product sales analysis on **semi-structured JSON order data**. By transforming denormalized data into a structured relational format, this pipeline enables deep insights into fulfillment performance and order-level revenue.
 
@@ -25,8 +23,6 @@ I implemented a scalable **ELT (Extract, Load, Transform)** pattern to process t
 ### 4. Analytical Output
 * **Channel Performance:** Calculates total sales, order counts, and percent contribution by fulfillment channel (e.g., In-store vs. Online).
 * **High-Value Targets:** Identifies top-performing orders by revenue for targeted business analysis.
-
----
 
 ## Key Techniques Demonstrated
 * **Advanced SQL:** JSON parsing with `JSON_TABLE()` and multi-level aggregation using CTEs.
