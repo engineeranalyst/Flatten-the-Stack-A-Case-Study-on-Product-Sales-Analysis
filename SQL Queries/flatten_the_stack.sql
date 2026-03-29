@@ -27,11 +27,6 @@ CREATE TABLE IF NOT EXISTS normalized_sales_orders
 	quantity INT
 );
 
-CREATE TABLE IF NOT EXISTS month_list
-(
-	month CHAR(3)
-);
-
 -- ==============================
 -- STEP 3: LOAD RAW DATA FROM CSV
 -- ==============================
