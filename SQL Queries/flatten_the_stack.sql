@@ -27,6 +27,11 @@ CREATE TABLE IF NOT EXISTS normalized_sales_orders
 	quantity INT
 );
 
+CREATE TABLE IF NOT EXISTS month_list
+(
+	month CHAR(3)
+);
+
 -- ==============================
 -- STEP 3: LOAD RAW DATA FROM CSV
 -- ==============================
@@ -100,7 +105,8 @@ WHERE NOT EXISTS (
 SELECT
 	fulfillment,
 	COUNT(DISTINCT order_number) AS total_orders,
-	ROUND(SUM(product_price*quantity)) AS total_sales
+	ROUND(SUM(product_price*quantity)) AS total_sales,
+    ROUND(SUM(product_price*quantity)/COUNT(DISTINCT order_number)) AS average_order_value
 FROM normalized_sales_orders
 GROUP BY fulfillment
 ORDER BY total_sales DESC;
@@ -127,3 +133,48 @@ GROUP BY
 	order_number,
 	fulfillment
 ORDER BY total_sales DESC;
+
+-- ===========================
+-- STEP 7: MoM GROWTH ANALYSIS
+-- ===========================
+-- Objective:
+-- Identify Month-over-Month growth performance.
+-- -------------------------------------------------------
+-- Caveats:
+-- - The years in the dataset don't have all of the months
+-- - This query accounts for that problem
+-- -------------------------------------------------------
+-- STEP 1: Generate a continuous list of all months in your data range
+WITH RECURSIVE calendar_cte AS 
+(
+    SELECT
+		MIN(DATE_FORMAT(order_date, '%Y-%m-01')) AS sales_month,
+		MAX(DATE_FORMAT(order_date, '%Y-%m-01')) AS max_month
+    FROM normalized_sales_orders
+    
+    UNION ALL
+    
+    SELECT sales_month + INTERVAL 1 MONTH, max_month
+    FROM calendar_cte
+    WHERE sales_month < max_month
+),
+-- STEP 2: Calculate actual sales from your data
+actual_sales_cte AS 
+(
+    SELECT 
+        DATE_FORMAT(order_date, '%Y-%m-01') AS sales_month,
+        SUM(product_price*quantity) AS total_sales
+    FROM normalized_sales_orders
+    GROUP BY sales_month
+)
+-- STEP 3: Join them together to fill the gaps
+SELECT 
+    YEAR(c.sales_month) AS year,
+    DATE_FORMAT(c.sales_month, '%b') AS month,
+    ROUND(a.total_sales) AS total_sales, -- Now LAG looks at the ACTUAL previous month, even if it's NULL
+    ROUND(LAG(a.total_sales) OVER (ORDER BY c.sales_month)) AS lag_total_sales, -- Calculate growth (will return NULL if either month is missing)
+    ROUND(((a.total_sales-LAG(a.total_sales) OVER (ORDER BY c.sales_month))/ 
+		  LAG(a.total_sales) OVER (ORDER BY c.sales_month)), 2) AS mom_growth_pct -- MoM growth is now accurate
+FROM calendar_cte c
+LEFT JOIN actual_sales_cte a ON c.sales_month = a.sales_month
+ORDER BY c.sales_month;
