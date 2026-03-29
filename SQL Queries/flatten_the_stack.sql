@@ -167,9 +167,7 @@ SELECT
     YEAR(c.sales_month) AS year,
     DATE_FORMAT(c.sales_month, '%b') AS month,
     ROUND(a.total_sales) AS total_sales, -- Now LAG looks at the ACTUAL previous month, even if it's NULL
-    ROUND(LAG(a.total_sales) OVER (ORDER BY c.sales_month)) AS lag_total_sales, -- Calculate growth (will return NULL if either month is missing)
-    ROUND(((a.total_sales-LAG(a.total_sales) OVER (ORDER BY c.sales_month))/ 
-		  LAG(a.total_sales) OVER (ORDER BY c.sales_month)), 2) AS mom_growth_pct -- MoM growth is now accurate
+    ROUND(LAG(a.total_sales) OVER (ORDER BY c.sales_month)) AS lag_total_sales -- Calculate growth (will return NULL if either month is missing)
 FROM calendar_cte c
 LEFT JOIN actual_sales_cte a ON c.sales_month = a.sales_month
 ORDER BY c.sales_month;
