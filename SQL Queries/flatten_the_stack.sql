@@ -166,7 +166,7 @@ actual_sales_cte AS
 SELECT 
     YEAR(c.sales_month) AS year,
     DATE_FORMAT(c.sales_month, '%b') AS month,
-    ROUND(a.total_sales) AS total_sales, -- Now LAG looks at the ACTUAL previous month, even if it's NULL
+    ROUND(a.total_sales) AS total_sales
 FROM calendar_cte c
 LEFT JOIN actual_sales_cte a ON c.sales_month = a.sales_month
 ORDER BY c.sales_month;
