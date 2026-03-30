@@ -6,7 +6,7 @@ An End-to-End ELT Pipeline: From Semi-Structured JSON to Relational Power Pivot 
 ## 📊 Executive Summary
 I performed a comprehensive product sales analysis.
 
-This project demonstrates a sophisticated **Extract, Load, Transform (ELT)** pipeline designed to solve a common modern data challenge: extracting business value from semi-structured, nested JSON transaction data. 
+My analysis includes a sophisticated **Extract, Load, Transform (ELT)** pipeline designed to solve a common modern data challenge: extracting business value from semi-structured, nested JSON transaction data. 
 
 By migrating raw CSV data into a **MySQL Relational Database**, I engineered a normalization process that "flattens" nested product arrays into a 1NF-compliant schema. The final output is a dynamic **Excel Power Pivot Dashboard** that provides deep-dive insights into fulfillment efficiency, order composition, and revenue momentum.
 
