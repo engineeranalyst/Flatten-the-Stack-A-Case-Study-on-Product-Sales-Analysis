@@ -20,9 +20,9 @@ By migrating raw CSV data into a **MySQL Relational Database**, I engineered a n
 
 ### 2. Data Modeling & DAX (Power Pivot)
 To maintain a "Single Source of Truth," I bypassed standard Pivot Tables in favor of **Power Pivot's Data Model**. This allowed for memory-efficient processing and the creation of sophisticated DAX measures:
-* **Total Revenue:** `SUMX` logic to calculate line-level totals across the relational model.
-* **Average Order Value (AOV):** A dynamic measure that recalculates based on fulfillment slicers.
-* **Fulfillment Contribution %:** Used `CALCULATE` and `ALL` functions to determine how much each channel contributes to the global bottom line.
+* **Total Orders:** used the `SUM` function to calculate the total number of orders.
+* **Total Sales:** used the `SUMX` function to calculate the total sales.
+* **Average Order Value (AOV):** formula: `[Total Sales]/[Total Orders]`
 
 ## 🧼 Data Cleaning Checklist
 - [x] **JSON Repair:** Stripped triple-quotes (`"""`) and fixed double-escaped quotes (`""`) to make strings parsable.
