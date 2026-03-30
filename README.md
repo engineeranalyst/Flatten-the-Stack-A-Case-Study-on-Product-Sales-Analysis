@@ -19,13 +19,13 @@ By migrating raw CSV data into a **MySQL Relational Database**, I engineered a n
 * **Recursive CTEs:** Engineered a recursive calendar dimension to solve the "Missing Month" problem, ensuring that Month-over-Month (MoM) calculations reflect true temporal gaps rather than "teleporting" between non-consecutive periods.
 
 ### 2. Data Modeling & DAX (Power Pivot)
-To maintain a "Single Source of Truth," I bypassed standard Pivot Tables in favor of **Power Pivot's Data Model**. This allowed for memory-efficient processing and the creation of sophisticated DAX measures:
-* **Total Sales:** used the `SUMX` function to calculate the total sales.
+To maintain a "Single Source of Truth," I bypassed standard Pivot Tables in favor of **Power Pivot's Data Model**. This allowed for memory-efficient processing and the creation of the following DAX measures:
+* **Total Sales:**
   ```
   SUMX(normalized_sales_orders, normalized_sales_orders[product_price]*normalized_sales_orders[quantity])`
   ```
   
-* **Total Orders:** used the `DISTINCTCOUNT` function to calculate the total number of orders.
+* **Total Orders:**
   ```
   DISTINCTCOUNT(normalized_sales_orders[order_number])`
   ```
