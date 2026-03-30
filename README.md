@@ -24,12 +24,10 @@ To maintain a "Single Source of Truth," I bypassed standard Pivot Tables in favo
   ```
   SUMX(normalized_sales_orders, normalized_sales_orders[product_price]*normalized_sales_orders[quantity])`
   ```
-  
 * **Total Orders:** used the `DISTINCTCOUNT` function to calculate the total number of orders.
   ```
   DISTINCTCOUNT(normalized_sales_orders[order_number])`
   ```
-  
 * **Average Order Value (AOV):**
   ```
   [Total Sales]/[Total Orders]`
