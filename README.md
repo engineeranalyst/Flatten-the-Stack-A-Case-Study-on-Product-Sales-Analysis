@@ -46,7 +46,7 @@ DISTINCTCOUNT(normalized_sales_orders[order_number])`
 - [x] **Calendar Normalization:** Injected "Placeholder Months" via SQL to prevent MoM growth inaccuracies.
 - [x] **Schema Enforcement:** Converted all numeric strings to `DECIMAL` and `INT` types for mathematical precision.
 
-## 💡 Real-World Business Insights
+## 💡 Business Insights
 Analysis of the processed data revealed several high-impact insights that would have been invisible in the raw JSON format:
 
 * **The "In-Store" Value Gap:** While Online orders are growing, **In-Store Average Order Value (AOV) is 106% higher ($2,211)** than Online AOV ($1,073). This suggests that the physical retail environment is significantly more effective at upselling or capturing high-ticket purchases.
