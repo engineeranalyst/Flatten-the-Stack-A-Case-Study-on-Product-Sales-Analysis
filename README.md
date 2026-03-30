@@ -22,7 +22,7 @@ By migrating raw CSV data into a **MySQL Relational Database**, I engineered a n
 To maintain a "Single Source of Truth," I bypassed standard Pivot Tables in favor of **Power Pivot's Data Model**. This allowed for memory-efficient processing and the creation of sophisticated DAX measures:
 * **Total Sales:** used the `SUMX` function to calculate the total sales.
   
-  `SUMX(normalized_sales_orders,normalized_sales_orders[product_price]*normalized_sales_orders[quantity])`
+  `SUMX(normalized_sales_orders, normalized_sales_orders[product_price]*normalized_sales_orders[quantity])`
   
 * **Total Orders:** used the `DISTINCTCOUNT` function to calculate the total number of orders.
   
