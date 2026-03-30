@@ -21,16 +21,19 @@ By migrating raw CSV data into a **MySQL Relational Database**, I engineered a n
 ### 2. Data Modeling & DAX (Power Pivot)
 To maintain a "Single Source of Truth," I bypassed standard Pivot Tables in favor of **Power Pivot's Data Model**. This allowed for memory-efficient processing and the creation of sophisticated DAX measures:
 * **Total Sales:** used the `SUMX` function to calculate the total sales.
-  
-  `SUMX(normalized_sales_orders, normalized_sales_orders[product_price]*normalized_sales_orders[quantity])`
+  ```
+  SUMX(normalized_sales_orders, normalized_sales_orders[product_price]*normalized_sales_orders[quantity])`
+  ```
   
 * **Total Orders:** used the `DISTINCTCOUNT` function to calculate the total number of orders.
-  
-  `DISTINCTCOUNT(normalized_sales_orders[order_number])`
+  ```
+  DISTINCTCOUNT(normalized_sales_orders[order_number])`
+  ```
   
 * **Average Order Value (AOV):**
-  
-  `[Total Sales]/[Total Orders]`
+  ```
+  [Total Sales]/[Total Orders]`
+  ```
 
 ### 3. EER Diagram
 
