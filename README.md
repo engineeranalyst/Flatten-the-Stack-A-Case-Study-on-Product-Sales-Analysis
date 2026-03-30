@@ -8,12 +8,6 @@ This project demonstrates a sophisticated **Extract, Load, Transform (ELT)** pip
 
 By migrating raw CSV data into a **MySQL Relational Database**, I engineered a normalization process that "flattens" nested product arrays into a 1NF-compliant schema. The final output is a dynamic **Excel Power Pivot Dashboard** that provides deep-dive insights into fulfillment efficiency, order composition, and revenue momentum.
 
-## 🧼 Data Cleaning Checklist
-- [x] **JSON Repair:** Stripped triple-quotes (`"""`) and fixed double-escaped quotes (`""`) to make strings parsable.
-- [x] **Whitespace Scrubbing:** Applied `TRIM` and `CLEAN` to fulfillment labels to remove hidden carriage returns (`_x000D_`).
-- [x] **Calendar Normalization:** Injected "Placeholder Months" via SQL to prevent MoM growth inaccuracies.
-- [x] **Schema Enforcement:** Converted all numeric strings to `DECIMAL` and `INT` types for mathematical precision.
-
 ## 🛠️ The Technical "Stack"
 
 ### 1. Data Engineering (MySQL)
@@ -27,6 +21,12 @@ To maintain a "Single Source of Truth," I bypassed standard Pivot Tables in favo
 * **Total Revenue:** `SUMX` logic to calculate line-level totals across the relational model.
 * **Average Order Value (AOV):** A dynamic measure that recalculates based on fulfillment slicers.
 * **Fulfillment Contribution %:** Used `CALCULATE` and `ALL` functions to determine how much each channel contributes to the global bottom line.
+
+## 🧼 Data Cleaning Checklist
+- [x] **JSON Repair:** Stripped triple-quotes (`"""`) and fixed double-escaped quotes (`""`) to make strings parsable.
+- [x] **Whitespace Scrubbing:** Applied `TRIM` and `CLEAN` to fulfillment labels to remove hidden carriage returns (`_x000D_`).
+- [x] **Calendar Normalization:** Injected "Placeholder Months" via SQL to prevent MoM growth inaccuracies.
+- [x] **Schema Enforcement:** Converted all numeric strings to `DECIMAL` and `INT` types for mathematical precision.
 
 ## 💡 Real-World Business Insights
 Analysis of the processed data revealed several high-impact insights that would have been invisible in the raw JSON format:
