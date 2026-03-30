@@ -1,4 +1,4 @@
-# Flatten The Stack - Relational Sales Intelligence
+# Flatten The Stack: Relational Sales Intelligence
 ### An End-to-End ELT Pipeline: From Semi-Structured JSON to Relational Power Pivot Intelligence
 
 <img width="1572" height="742" alt="Flatten The Stack Dashboard" src="https://github.com/user-attachments/assets/36baa3d9-d32f-440a-9b95-0cbb1a3d3d3a" />
