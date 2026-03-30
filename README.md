@@ -32,7 +32,7 @@ To maintain a "Single Source of Truth," I bypassed standard Pivot Tables in favo
   
 * **Average Order Value (AOV):**
   ```
-  [Total Sales]/[Total Orders]`
+  [Total Sales]/[Total Orders]
   ```
 
 ### 3. EER Diagram
