@@ -34,7 +34,7 @@ To maintain a "Single Source of Truth," I bypassed standard Pivot Tables in favo
 
 ### 3. EER Diagram
 
-<img width="3477" height="1073" alt="EER Diagram" src="https://github.com/user-attachments/assets/7c7ae82c-0f00-464e-be1b-9663c7bbeae9" />
+<img width="2970" height="858" alt="EER Diagram" src="https://github.com/user-attachments/assets/ee878dab-3f61-4cbb-9505-5aa41def668c" />
 
 
 ## 🧼 Data Cleaning Checklist
