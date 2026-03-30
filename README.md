@@ -4,6 +4,8 @@
 <img width="1572" height="742" alt="Flatten The Stack Dashboard" src="https://github.com/user-attachments/assets/36baa3d9-d32f-440a-9b95-0cbb1a3d3d3a" />
 
 ## 📊 Executive Summary
+I performed a comprehensive product sales analysis for this project.
+
 This project demonstrates a sophisticated **Extract, Load, Transform (ELT)** pipeline designed to solve a common modern data challenge: extracting business value from semi-structured, nested JSON transaction data. 
 
 By migrating raw CSV data into a **MySQL Relational Database**, I engineered a normalization process that "flattens" nested product arrays into a 1NF-compliant schema. The final output is a dynamic **Excel Power Pivot Dashboard** that provides deep-dive insights into fulfillment efficiency, order composition, and revenue momentum.
