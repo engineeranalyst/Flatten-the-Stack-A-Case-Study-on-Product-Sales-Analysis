@@ -32,6 +32,11 @@ To maintain a "Single Source of Truth," I bypassed standard Pivot Tables in favo
   
   `[Total Sales]/[Total Orders]`
 
+### 3. EER Diagram
+
+<img width="3477" height="1073" alt="EER Diagram" src="https://github.com/user-attachments/assets/7c7ae82c-0f00-464e-be1b-9663c7bbeae9" />
+
+
 ## 🧼 Data Cleaning Checklist
 - [x] **JSON Repair:** Stripped triple-quotes (`"""`) and fixed double-escaped quotes (`""`) to make strings parsable.
 - [x] **Whitespace Scrubbing:** Applied `TRIM` and `CLEAN` to fulfillment labels to remove hidden carriage returns (`_x000D_`).
