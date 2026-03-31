@@ -27,7 +27,7 @@ SUMX(normalized_sales_orders, normalized_sales_orders[product_price]*normalized_
   
 * **Total Orders:**
 ```
-DISTINCTCOUNT(normalized_sales_orders[order_number])`
+DISTINCTCOUNT(normalized_sales_orders[order_number])
 ```
   
 * **Average Order Value (AOV):**
