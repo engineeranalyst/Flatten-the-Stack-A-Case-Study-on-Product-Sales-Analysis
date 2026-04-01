@@ -70,14 +70,14 @@ SELECT
 	jt.product_price,
 	jt.quantity
 FROM sales_orders s
-	CROSS JOIN JSON_TABLE(
-		REPLACE(TRIM(BOTH '"' FROM s.line_items), '""', '"'),
-		'$[*]' COLUMNS(
-		product_name VARCHAR(100) PATH '$.product.product_name',
-		product_price DECIMAL(10, 2) PATH '$.product.product_price',
-		quantity INT PATH '$.quantity'
-		)
-	) jt
+CROSS JOIN JSON_TABLE(
+	REPLACE(TRIM(BOTH '"' FROM s.line_items), '""', '"'),
+	'$[*]' COLUMNS(
+	product_name VARCHAR(100) PATH '$.product.product_name',
+	product_price DECIMAL(10, 2) PATH '$.product.product_price',
+	quantity INT PATH '$.quantity'
+	)
+) jt
 WHERE NOT EXISTS (
 	SELECT 1
 	FROM normalized_sales_orders n
