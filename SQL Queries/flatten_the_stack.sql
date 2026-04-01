@@ -111,9 +111,10 @@ ORDER BY total_sales DESC;
 -- ===========================
 -- STEP 6: MoM GROWTH ANALYSIS
 -- ===========================
+-- ----------------------------------------
 -- Objective:
 -- Analyze month-over-month revenue trends.
-
+-- ----------------------------------------
 -- Challenge:
 -- The dataset may not contain all months.
 -- Solution:
