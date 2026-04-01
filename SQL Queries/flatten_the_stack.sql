@@ -132,7 +132,7 @@ WITH RECURSIVE calendar_cte AS
 	UNION ALL
 
 	SELECT
-		sales_month + INTERVAL 1 MONTH,
+		sales_month+INTERVAL 1 MONTH,
         max_month
 	FROM calendar_cte
 	WHERE sales_month < max_month
@@ -144,7 +144,7 @@ actual_sales_cte AS
 (
 	SELECT
 		DATE_FORMAT(s.order_date, '%Y-%m-01') AS sales_month,
-		SUM(n.product_price * n.quantity) AS total_sales
+		SUM(n.product_price*n.quantity) AS total_sales
 	FROM sales_orders s
 	INNER JOIN normalized_sales_orders n ON n.order_number = s.order_number
 	GROUP BY sales_month
