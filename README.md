@@ -42,7 +42,7 @@ DISTINCTCOUNT(normalized_sales_orders[order_number])
 
 ## 🧼 Data Cleaning Checklist
 - [x] **JSON Repair:** Stripped triple-quotes (`"""`) and fixed double-escaped quotes (`""`) to make strings parsable.
-- [x] **Whitespace Scrubbing:** Applied `TRIM` and `CLEAN` to fulfillment labels to remove hidden carriage returns (`_x000D_`).
+- [x] **Whitespace Scrubbing:** Applied `TRIM` to fulfillment labels to remove hidden carriage returns (`_x000D_`).
 - [x] **Calendar Normalization:** Injected "Placeholder Months" via SQL to prevent MoM growth inaccuracies.
 - [x] **Schema Enforcement:** Converted all numeric strings to `DECIMAL` and `INT` types for mathematical precision.
 
