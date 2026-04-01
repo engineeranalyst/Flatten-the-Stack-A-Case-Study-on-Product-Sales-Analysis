@@ -88,7 +88,6 @@ WHERE NOT EXISTS (
 -- ======================
 -- STEP 5: ORDER ANALYSIS
 -- ======================
--- -------------------------------------------
 -- Objective:
 -- Identify high-performing individual orders.
 -- -------------------------------------------
@@ -111,12 +110,12 @@ ORDER BY total_sales DESC;
 -- ===========================
 -- STEP 6: MoM GROWTH ANALYSIS
 -- ===========================
--- ----------------------------------------
 -- Objective:
 -- Analyze month-over-month revenue trends.
 -- ----------------------------------------
 -- Challenge:
 -- The dataset may not contain all months.
+-- ---------------------------------------
 -- Solution:
 -- Generate a continuous calendar and join actual sales data.
 WITH RECURSIVE calendar_cte AS
