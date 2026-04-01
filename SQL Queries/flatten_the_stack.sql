@@ -94,7 +94,7 @@ WHERE NOT EXISTS (
 -- Metrics:
 -- - Number of distinct products per order
 -- - Total number of products per order
--- - Total revenue per order
+-- - Total sales per order
 -- -------------------------------------------
 SELECT
 	order_number,
@@ -107,11 +107,11 @@ GROUP BY
     fulfillment
 ORDER BY total_sales DESC;
 
--- ===========================
--- STEP 6: MoM GROWTH ANALYSIS
--- ===========================
+-- =================================
+-- STEP 6: MoM SALES GROWTH ANALYSIS
+-- =================================
 -- Objective:
--- Analyze month-over-month revenue trends.
+-- Analyze month-over-month sales trends.
 -- ----------------------------------------------------------
 -- Challenge:
 -- The dataset may not contain all months.
