@@ -46,7 +46,7 @@ COUNT(sales_orders[order_number])
 - [x] **Calendar Normalization:** Injected "Placeholder Months" via SQL to prevent MoM growth inaccuracies.
 - [x] **Schema Enforcement:** Converted all numeric strings to `DECIMAL` and `INT` types for mathematical precision.
 
-## 💡 Business Insights
+## 📊 Key Insights
 Analysis of the processed data revealed several high-impact insights that would have been invisible in the raw JSON format:
 
 * **The "In-Store" Value Gap:** While Online orders are growing, **In-Store Average Order Value (AOV) is 106% higher ($2,211)** than Online AOV ($1,073). This suggests that the physical retail environment is significantly more effective at upselling or capturing high-ticket purchases.
@@ -57,7 +57,7 @@ Analysis of the processed data revealed several high-impact insights that would 
 
 * **Reporting Transparency:** The Waterfall chart explicitly highlights **"Reporting Gaps"**. By treating these as "Unreported" rather than "Zero Revenue," the dashboard maintains a high level of **Analytical Integrity**, preventing misleading executive summaries.
 
-## 📈 Recommendations
+## 💡 Recommendations
 
 Based on the patterns identified during this analysis, I propose the following strategic actions to optimize revenue and operational efficiency:
 
