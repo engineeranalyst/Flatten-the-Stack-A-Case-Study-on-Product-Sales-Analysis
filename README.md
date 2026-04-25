@@ -16,7 +16,6 @@ By migrating raw CSV data into a **MySQL Relational Database**, I engineered a n
 * **Staging & Ingestion:** Developed an idempotent ingestion layer using `LOAD DATA INFILE` with custom date-masking (`STR_TO_DATE`) to handle inconsistent source formats.
 * **JSON Normalization:** Utilized `JSON_TABLE` and advanced `REPLACE` and `TRIM` logic to unpack nested product arrays. This resolved a critical "Malformed JSON" issue caused by triple-quote escaping in the source CSV.
 * **Relational Modeling:** Established a Star Schema by enforcing **Referential Integrity** with Foreign Keys between `sales_orders` (Header) and `normalized_sales_orders` (Line Items).
-* **Recursive CTEs:** Engineered a recursive calendar dimension to solve the "Missing Month" problem, ensuring that Month-over-Month (MoM) calculations reflect true temporal gaps rather than "teleporting" between non-consecutive periods.
 
 ### 2. Data Modeling & DAX (Power Pivot)
 To maintain a "Single Source of Truth," I bypassed standard Pivot Tables in favor of **Power Pivot's Data Model**. This allowed for memory-efficient processing and the creation of the following DAX measures:
