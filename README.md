@@ -1,7 +1,7 @@
 # Flatten The Stack: A Case Study on Product Sales Analysis
 An End-to-End ELT Pipeline: From Semi-Structured JSON to Relational Power Pivot Intelligence
 
-<img width="624" height="367" alt="Flatten The Stack Dashboard" src="https://github.com/user-attachments/assets/358ebfdd-02b8-4fb6-b205-37d7f9495442" />
+<img width="1497" height="873" alt="Flatten The Stack Dashboard" src="https://github.com/user-attachments/assets/42e4355c-abb5-4b03-855d-5c711e542015" />
 
 ## 📊 Executive Summary
 I performed a comprehensive product sales analysis.
