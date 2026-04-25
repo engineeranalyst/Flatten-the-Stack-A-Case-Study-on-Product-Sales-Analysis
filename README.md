@@ -55,7 +55,7 @@ Analysis of the processed data revealed several high-impact insights that would 
 
 <img width="3513" height="1591" alt="2018 Anomaly" src="https://github.com/user-attachments/assets/2d73d6ed-cf9d-4ff3-80e3-6f8daead5985" />
 
-* **Reporting Transparency:** The Waterfall chart explicitly highlights **"Reporting Gaps"** (Jan–Aug 2016). By treating these as "Unreported" rather than "Zero Revenue," the dashboard maintains a high level of **Analytical Integrity**, preventing misleading executive summaries.
+* **Reporting Transparency:** The Waterfall chart explicitly highlights **"Reporting Gaps"**. By treating these as "Unreported" rather than "Zero Revenue," the dashboard maintains a high level of **Analytical Integrity**, preventing misleading executive summaries.
 
 ## 🚀 How to Run This Project
 1.  Run the `flatten_the_stack.sql` script in a MySQL 8.0+ environment.
