@@ -57,7 +57,7 @@ Analysis of the processed data revealed several high-impact insights that would 
 
 * **Reporting Transparency:** The Waterfall chart explicitly highlights **"Reporting Gaps"**. By treating these as "Unreported" rather than "Zero Revenue," the dashboard maintains a high level of **Analytical Integrity**, preventing misleading executive summaries.
 
-### 📈 Recommendations
+## 📈 Recommendations
 
 Based on the patterns identified during this analysis, I propose the following strategic actions to optimize revenue and operational efficiency:
 
