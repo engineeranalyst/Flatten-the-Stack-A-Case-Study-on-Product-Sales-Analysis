@@ -57,6 +57,26 @@ Analysis of the processed data revealed several high-impact insights that would 
 
 * **Reporting Transparency:** The Waterfall chart explicitly highlights **"Reporting Gaps"**. By treating these as "Unreported" rather than "Zero Revenue," the dashboard maintains a high level of **Analytical Integrity**, preventing misleading executive summaries.
 
+### 📈 Data-Driven Recommendations
+
+Based on the patterns identified during this analysis, I propose the following strategic actions to optimize revenue and operational efficiency:
+
+* **Optimize the "In-Store" Experience for Online Conversion:**
+    With In-Store AOV outperforming Online AOV by over 100%, there is a clear opportunity to transfer high-touch retail tactics to the digital space. 
+    * *Action:* Implement "Shop the Look" features or interactive product comparison tools on the website to mimic the high-conversion environment of the physical store.
+
+* **Implement Tiered Bundle Pricing:**
+    Given the reliance on "Hero Products" (orders of 1-2 items), the business has an opportunity to increase basket size.
+    * *Action:* Introduce tiered pricing or "Complete the Set" discounts for customers purchasing single items, effectively nudging the average number of products per order from 1-2 up to 3+.
+
+* **Establish a B2B "High-Value" Segmentation Strategy:**
+    The October 2018 anomaly highlighted that high-value B2B orders represent a significant—yet volatile—revenue stream. Relying on these "spikes" creates dangerous forecasting errors.
+    * *Action:* Create a dedicated B2B account management track. By formalizing this segment, the business can move away from relying on accidental, large-scale outliers and instead build predictable, contract-based B2B revenue cycles.
+
+* **Proactive Reporting Gap Remediation:**
+    The identified "Reporting Gaps" represent lost visibility into customer behavior. 
+    * *Action:* Implement automated data validation alerts at the point of ingestion. By catching malformed JSON or missing fulfillment logs in real-time, the business can ensure 100% data coverage, allowing for more reliable long-term trend forecasting.
+
 ## 🚀 How to Run This Project
 1.  Run the `flatten_the_stack.sql` script in a MySQL 8.0+ environment.
 2.  Ensure the `sales_orders.csv` is placed in the secure upload directory.
