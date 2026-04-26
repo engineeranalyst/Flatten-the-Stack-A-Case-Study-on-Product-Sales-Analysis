@@ -79,4 +79,5 @@ Based on the patterns identified during this analysis, I propose the following s
 ## 🚀 How to Run This Project
 1.  Run the `flatten_the_stack.sql` script in a MySQL 8.0+ environment.
 2.  Ensure the `sales_orders.csv` is placed in the secure upload directory.
-3.  Open `Flatten The Stack.xlsx` and refresh the **Power Pivot Data Model** to see the live dashboard.
+3.  Download `Flatten The Stack.xlsx`and the CSV files for this project.
+4.  Open the Queries and Connections Panel and put the Full File Path names of the CSV files in the Source.
