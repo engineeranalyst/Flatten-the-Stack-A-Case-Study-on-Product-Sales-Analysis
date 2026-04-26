@@ -81,3 +81,4 @@ Based on the patterns identified during this analysis, I propose the following s
 2.  Ensure the `sales_orders.csv` is placed in the secure upload directory.
 3.  Download `Flatten The Stack.xlsx`and the CSV files for this project.
 4.  Open the Queries and Connections Panel and put the full file path names of the CSV files in the Source.
+5.  Refresh the Preview of the Data Source.
