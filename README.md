@@ -80,6 +80,6 @@ Based on the patterns identified during this analysis, I propose the following s
 1.  Run the `flatten_the_stack.sql` script in a MySQL 8.0+ environment.
 2.  Ensure the `sales_orders.csv` is placed in the secure upload directory.
 3.  Download the `Flatten The Stack.xlsx` file.
-4.  Import the CSV files.
-5.  Open the Queries and Connections Panel and put the full file path names of the CSV files in the Source.
+4.  Download the CSV files.
+5.  Open the Power Query Editor and place the full file path names of the CSV files in the Source.
 6.  Refresh the Preview of the Data Source.
